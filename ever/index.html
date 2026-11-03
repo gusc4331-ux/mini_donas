@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repostería & Delicias | Ever Poma - Viacha</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <!-- Archivo CSS Personalizado -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-brand-light font-sans text-gray-800 flex flex-col min-h-screen">
+
+    <!-- HEADER / NAVEGACIÓN -->
+    <header class="bg-brand-dark text-white sticky top-0 z-40 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logotipo e Identidad -->
+                <!-- Logotipo e Identidad -->
+<div class="flex items-center space-x-3 cursor-pointer" onclick="window.scrollTo(0, 0)">
+    <!-- LOGO DE IMAGEN -->
+    <img src="logo.jpeg" alt="Logo Delicias Ever Poma" class="h-12 w-12 sm:h-14 sm:w-14 object-contain rounded-full shadow-md bg-white p-1">
+    
+    <div>
+        <h1 class="font-serif font-bold text-xl sm:text-2xl text-amber-200 tracking-wide">Delicias Ever Poma</h1>
+        <p class="text-xs text-amber-100/80 font-light"><i class="fa-solid fa-location-dot text-amber-400 mr-1"></i>Viacha, Bolivia</p>
+    </div>
+</div>
+
+                <!-- Menú Navegación Escritorio -->
+                <nav class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="#inicio" class="hover:text-amber-300 transition-colors py-2">Inicio</a>
+                    <a href="#nosotros" class="hover:text-amber-300 transition-colors py-2">Sobre Nosotros</a>
+                    <a href="#productos" class="hover:text-amber-300 transition-colors py-2">Catálogo</a>
+                    <a href="#contacto" class="hover:text-amber-300 transition-colors py-2">Ubicación y Contacto</a>
+                </nav>
+
+                <!-- Botón Pedir Ahora -->
+                <div class="hidden md:block">
+                    <a href="#productos" class="bg-amber-500 hover:bg-amber-600 text-brand-dark font-bold px-4 py-2 rounded-lg shadow transition transform hover:-translate-y-0.5 inline-block">
+                        <i class="fa-solid fa-cart-shopping mr-1"></i> Hacer Pedido
+                    </a>
+                </div>
+
+                <!-- Botón Menú Móvil -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-white hover:text-amber-300 focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menú Desplegable Móvil -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-dark border-t border-brand-primary px-4 pt-2 pb-4 space-y-2">
+            <a href="#inicio" class="block px-3 py-2 rounded-md hover:bg-brand-primary text-white font-medium">Inicio</a>
+            <a href="#nosotros" class="block px-3 py-2 rounded-md hover:bg-brand-primary text-white font-medium">Sobre Nosotros</a>
+            <a href="#productos" class="block px-3 py-2 rounded-md hover:bg-brand-primary text-white font-medium">Catálogo</a>
+            <a href="#contacto" class="block px-3 py-2 rounded-md hover:bg-brand-primary text-white font-medium">Ubicación y Contacto</a>
+        </div>
+    </header>
+
+    <!-- CARRUSEL DE IMÁGENES / HERO -->
+    <section id="inicio" class="relative bg-brand-dark overflow-hidden">
+        <div id="carousel" class="relative h-72 sm:h-96 md:h-[450px] w-full">
+            <!-- Slide 1 -->
+            <div class="carousel-slide active absolute inset-0">
+                <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=1200&q=80" alt="Donas Artesanales" class="w-full h-full object-cover opacity-40">
+                <div class="absolute inset-0 flex flex-col justify-center items-center text-center p-6 text-white max-w-3xl mx-auto">
+                    <span class="text-amber-400 font-bold tracking-wider uppercase text-xs sm:text-sm mb-2">¡Recién Horneados!</span>
+                    <h2 class="font-serif text-3xl sm:text-5xl font-bold mb-4 drop-shadow-md">Las Mejores Donas y Chocolates de Viacha</h2>
+                    <p class="text-sm sm:text-lg mb-6 text-gray-200">Sabor artesanal único creado con ingredientes de alta calidad por Ever Poma.</p>
+                    <a href="#productos" class="bg-amber-500 hover:bg-amber-600 text-brand-dark font-bold px-6 py-3 rounded-full shadow-lg transition transform hover:scale-105">
+                        Ver Catálogo Completo
+                    </a>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-slide absolute inset-0">
+                <img src="https://images.unsplash.com/photo-1549007994-cb92caebd54b?auto=format&fit=crop&w=1200&q=80" alt="Chocolates Personalizados" class="w-full h-full object-cover opacity-40">
+                <div class="absolute inset-0 flex flex-col justify-center items-center text-center p-6 text-white max-w-3xl mx-auto">
+                    <span class="text-amber-400 font-bold tracking-wider uppercase text-xs sm:text-sm mb-2">Diseños Especiales</span>
+                    <h2 class="font-serif text-3xl sm:text-5xl font-bold mb-4 drop-shadow-md">Chocolates en Forma de Corazones y Ositos</h2>
+                    <p class="text-sm sm:text-lg mb-6 text-gray-200">El detalle perfecto para regalar en ocasiones especiales.</p>
+                    <a href="#productos" onclick="filterCategory('chocolates')" class="bg-amber-500 hover:bg-amber-600 text-brand-dark font-bold px-6 py-3 rounded-full shadow-lg transition transform hover:scale-105">
+                        Explorar Chocolates
+                    </a>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-slide absolute inset-0">
+                <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=1200&q=80" alt="Buñuelos y Api" class="w-full h-full object-cover opacity-40">
+                <div class="absolute inset-0 flex flex-col justify-center items-center text-center p-6 text-white max-w-3xl mx-auto">
+                    <span class="text-amber-400 font-bold tracking-wider uppercase text-xs sm:text-sm mb-2">Tradición Calientita</span>
+                    <h2 class="font-serif text-3xl sm:text-5xl font-bold mb-4 drop-shadow-md">Buñuelos Tradicionales con Api o Refrescos</h2>
+                    <p class="text-sm sm:text-lg mb-6 text-gray-200">Disfruta de nuestros buñuelos crujientes y refrescos artesanales hervidos.</p>
+                    <a href="#productos" onclick="filterCategory('bunuelos')" class="bg-amber-500 hover:bg-amber-600 text-brand-dark font-bold px-6 py-3 rounded-full shadow-lg transition transform hover:scale-105">
+                        Probar Buñuelos
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controles Carrusel -->
+        <button id="prev-slide" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-3 rounded-full transition">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button id="next-slide" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-3 rounded-full transition">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+    </section>
+
+    <!-- SOBRE NOSOTROS -->
+    <section id="nosotros" class="py-12 bg-white">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <h2 class="font-serif text-3xl font-bold text-brand-dark mb-4">Bienvenidos a Repostería Ever Poma</h2>
+            <div class="w-20 h-1 bg-amber-500 mx-auto mb-6 rounded"></div>
+            <p class="text-gray-600 max-w-2xl mx-auto leading-relaxed mb-6">
+                Nos encontramos ubicados en la <span class="font-semibold text-brand-primary">Ciudad de Viacha</span>. Nos especializamos en la elaboración artesanal de delicias dulces: chocolates personalizados, donas suaves, buñuelos calientes y refrescos tradicionales.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8">
+                <div class="p-4 bg-brand-light rounded-xl shadow-sm border border-amber-100">
+                    <i class="fa-solid fa-heart text-3xl text-amber-600 mb-2"></i>
+                    <h3 class="font-bold text-brand-dark">Sabor Artesanal</h3>
+                    <p class="text-xs text-gray-500 mt-1">Preparados diariamente con la mejor calidad.</p>
+                </div>
+                <div class="p-4 bg-brand-light rounded-xl shadow-sm border border-amber-100">
+                    <i class="fa-solid fa-truck-fast text-3xl text-amber-600 mb-2"></i>
+                    <h3 class="font-bold text-brand-dark">Delivery en Viacha</h3>
+                    <p class="text-xs text-gray-500 mt-1">Envíos a domicilio o retiro en local.</p>
+                </div>
+                <div class="p-4 bg-brand-light rounded-xl shadow-sm border border-amber-100">
+                    <i class="fa-brands fa-whatsapp text-3xl text-amber-600 mb-2"></i>
+                    <h3 class="font-bold text-brand-dark">Pedidos Directos</h3>
+                    <p class="text-xs text-gray-500 mt-1">Atención rápida por WhatsApp.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATÁLOGO DE PRODUCTOS -->
+    <section id="productos" class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex-grow">
+        <div class="text-center mb-8">
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-dark">Nuestros Productos</h2>
+            <p class="text-gray-600 mt-2">Selecciona una categoría para explorar el menú</p>
+        </div>
+
+        <!-- Categorías Principales -->
+        <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-8">
+            <button onclick="filterCategory('chocolates')" id="btn-chocolates" class="cat-btn bg-brand-primary text-white font-semibold px-5 py-2.5 rounded-full shadow border border-amber-200 transition text-sm sm:text-base">
+                <i class="fa-solid fa-cookie mr-1.5"></i> Chocolates
+            </button>
+            <button onclick="filterCategory('donas')" id="btn-donas" class="cat-btn bg-white text-brand-dark hover:bg-brand-primary hover:text-white font-semibold px-5 py-2.5 rounded-full shadow border border-amber-200 transition text-sm sm:text-base">
+                <i class="fa-solid fa-circle-dot mr-1.5"></i> Donas
+            </button>
+            <button onclick="filterCategory('bunuelos')" id="btn-bunuelos" class="cat-btn bg-white text-brand-dark hover:bg-brand-primary hover:text-white font-semibold px-5 py-2.5 rounded-full shadow border border-amber-200 transition text-sm sm:text-base">
+                <i class="fa-solid fa-hotdog mr-1.5"></i> Buñuelos
+            </button>
+            <button onclick="filterCategory('refrescos')" id="btn-refrescos" class="cat-btn bg-white text-brand-dark hover:bg-brand-primary hover:text-white font-semibold px-5 py-2.5 rounded-full shadow border border-amber-200 transition text-sm sm:text-base">
+                <i class="fa-solid fa-glass-water mr-1.5"></i> Refrescos
+            </button>
+        </div>
+
+        <!-- Subcategorías Refrescos -->
+        <div id="subcat-refrescos-container" class="hidden justify-center gap-3 mb-8 bg-amber-100/60 p-3 rounded-xl max-w-md mx-auto">
+            <button onclick="filterSubCategory('todos')" id="sub-btn-todos" class="subcat-btn bg-brand-accent text-white font-medium px-4 py-1.5 rounded-lg text-xs sm:text-sm">
+                Todos
+            </button>
+            <button onclick="filterSubCategory('hervidos')" id="sub-btn-hervidos" class="subcat-btn bg-white text-brand-dark font-medium px-4 py-1.5 rounded-lg text-xs sm:text-sm hover:bg-amber-200">
+                Hervidos Artesanales
+            </button>
+            <button onclick="filterSubCategory('gaseosas')" id="sub-btn-gaseosas" class="subcat-btn bg-white text-brand-dark font-medium px-4 py-1.5 rounded-lg text-xs sm:text-sm hover:bg-amber-200">
+                Gaseosas
+            </button>
+        </div>
+
+        <!-- Grilla de Productos -->
+        <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"></div>
+    </section>
+
+    <!-- MODAL DE COMPRA -->
+    <div id="purchase-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full overflow-hidden">
+            <div class="bg-brand-dark text-white p-4 flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <i class="fa-brands fa-whatsapp text-2xl text-green-400"></i>
+                    <h3 class="font-bold text-lg">Confirmar Pedido</h3>
+                </div>
+                <button onclick="closeModal()" class="text-gray-300 hover:text-white text-2xl font-bold">&times;</button>
+            </div>
+
+            <form id="order-form" onsubmit="sendWhatsAppOrder(event)" class="p-6 space-y-4">
+                <input type="hidden" id="modal-product-id">
+                
+                <div class="flex items-center space-x-3 bg-brand-light p-3 rounded-lg border border-amber-200">
+                    <img id="modal-product-img" src="" alt="" class="w-16 h-16 object-cover rounded-md">
+                    <div>
+                        <h4 id="modal-product-name" class="font-bold text-brand-dark text-base"></h4>
+                        <p id="modal-product-price" class="text-amber-700 font-semibold text-sm"></p>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Tu Nombre Completo *</label>
+                    <input type="text" id="client-name" required placeholder="Ej. Ana Mendoza" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:outline-none text-sm">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Cantidad *</label>
+                    <div class="flex items-center space-x-3">
+                        <button type="button" onclick="adjustQuantity(-1)" class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold px-3 py-1 rounded-lg text-lg">-</button>
+                        <input type="number" id="client-quantity" min="1" max="100" value="1" required onchange="updateTotal()" class="w-20 text-center py-1.5 border border-gray-300 rounded-lg font-bold text-base focus:outline-none">
+                        <button type="button" onclick="adjustQuantity(1)" class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold px-3 py-1 rounded-lg text-lg">+</button>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Método de Entrega *</label>
+                    <select id="delivery-method" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:outline-none text-sm">
+                        <option value="Recoger en Local (Viacha)">Recoger en el Local (Viacha)</option>
+                        <option value="Envío por Delivery (Viacha)">Envío por Delivery (Viacha)</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Notas (Opcional)</label>
+                    <textarea id="order-notes" rows="2" placeholder="Ej. Dedicatoria especial..." class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:outline-none text-xs"></textarea>
+                </div>
+
+                <div class="border-t pt-3 flex justify-between items-center text-brand-dark">
+                    <span class="font-bold">Monto Total:</span>
+                    <span id="modal-total-price" class="font-extrabold text-xl text-amber-700">0.00 Bs</span>
+                </div>
+
+                <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-lg shadow-lg transition flex items-center justify-center space-x-2">
+                    <i class="fa-brands fa-whatsapp text-xl"></i>
+                    <span>Enviar Pedido por WhatsApp</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- PIE DE PÁGINA -->
+    <footer id="contacto" class="bg-brand-dark text-white border-t-4 border-amber-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+                <div>
+                    <h3 class="font-serif text-xl font-bold text-amber-300 mb-3">Delicias Ever Poma</h3>
+                    <p class="text-sm text-gray-300 mb-3">La mejor calidad en chocolates, donas, buñuelos y refrescos.</p>
+                    <p class="text-xs text-amber-200/80"><i class="fa-solid fa-user mr-1"></i> Propietario: Ever Poma</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-amber-300 mb-3 uppercase text-sm">Ubicación y Atención</h4>
+                    <p class="text-sm text-gray-300"><i class="fa-solid fa-location-dot text-amber-400 mr-2"></i>Ciudad de Viacha, Bolivia</p>
+                    <p class="text-sm text-gray-300 mt-2"><i class="fa-solid fa-clock text-amber-400 mr-2"></i>Lunes a Domingo: 08:00 - 20:00</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-amber-300 mb-3 uppercase text-sm">Contáctanos</h4>
+                    <div class="flex justify-center md:justify-start space-x-4 mb-4">
+                        <a href="https://wa.me/59164118741" target="_blank" class="bg-green-600 hover:bg-green-700 w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                        </a>
+                        <a href="#" class="bg-blue-600 hover:bg-blue-700 w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fa-brands fa-facebook-f text-lg"></i>
+                        </a>
+                    </div>
+                    <p class="text-xs text-gray-400">WhatsApp Oficial: <span class="text-amber-300 font-bold">+591 64118741</span></p>
+                </div>
+            </div>
+            <div class="border-t border-brand-primary mt-8 pt-6 text-center text-xs text-gray-400">
+                <p>&copy; 2026 Delicias Ever Poma - Viacha. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Archivo JS Personalizado -->
+    <script src="script.js"></script>
+</body>
+</html>

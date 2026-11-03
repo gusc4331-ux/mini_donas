@@ -1,0 +1,57 @@
+/* Configuración de colores personalizados para Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Configuración de temas Tailwind vía CSS Variables o Clases */
+:root {
+    --brand-dark: #4A2E2B;
+    --brand-primary: #8B4513;
+    --brand-accent: #D2691E;
+    --brand-light: #FFF8EE;
+    --brand-cream: #F5E6D3;
+}
+
+/* Clases auxiliares para el Carrusel */
+.carousel-slide {
+    display: none;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-slide.active {
+    display: block;
+}
+
+/* Desplazamiento suave para la navegación */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estilos de fondo y colores personalizados */
+.bg-brand-dark {
+    background-color: var(--brand-dark);
+}
+
+.bg-brand-primary {
+    background-color: var(--brand-primary);
+}
+
+.bg-brand-accent {
+    background-color: var(--brand-accent);
+}
+
+.bg-brand-light {
+    background-color: var(--brand-light);
+}
+
+.text-brand-dark {
+    color: var(--brand-dark);
+}
+
+.text-brand-primary {
+    color: var(--brand-primary);
+}
+
+.border-brand-primary {
+    border-color: var(--brand-primary);
+}
